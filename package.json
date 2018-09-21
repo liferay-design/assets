@@ -1,0 +1,37 @@
+{
+  "name": "assets.liferay.design",
+  "version": "1.0.0",
+  "description": "asset library for liferay.design",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/liferay.design/assets.git"
+  },
+  "keywords": [
+    "asset",
+    "library",
+    "svg",
+    "animation",
+    "icons",
+    "design"
+  ],
+  "author": "plhnk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/liferay.design/assets/issues"
+  },
+  "homepage": "https://assets.liferay.design",
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "del": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-sass": "^4.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-useref": "^3.1.5",
+    "run-sequence": "^2.2.1"
+  }
+}
