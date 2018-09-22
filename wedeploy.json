@@ -1,7 +1,4 @@
 {
   "id": "assets",
-  "image": "wedeploy/hosting:2.0.0",
-  "env": {
-    "WEDEPLOY_WEB_PATH": "./app"
-  }
+  "port": 8080
 }
