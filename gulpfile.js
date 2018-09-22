@@ -13,12 +13,14 @@ var paths = {
     dirs: {
         dist: {
             css: 'app/dist/css',
-            html: 'app/dist/'
+            images: 'app/dist/images',
+            html: 'app/dist'
         },
         src: {
             allFiles: 'app/src/**/*',
             scss: 'app/src/scss',
-            html: 'app/src/*.html'
+            html: 'app/src/*.html',
+            images: 'app/src/images/**'
         },
     },
     sass: 'app/src/scss/**/*.scss'
@@ -53,7 +55,15 @@ gulp.task('html', function() {
         }))
 })
 
-gulp.task('app', gulp.parallel('sass', 'html'));
+gulp.task('images', function() {
+    return gulp.src(paths.dirs.src.images)
+        .pipe(gulp.dest(paths.dirs.dist.images))
+        .pipe(browserSync.reload({
+            stream: true
+        }))
+})
+
+gulp.task('app', gulp.parallel('sass', 'html', 'images'));
 
 gulp.task('build', gulp.series('app', 'browserSync'));
 

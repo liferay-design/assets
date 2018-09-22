@@ -4,7 +4,8 @@
   "description": "asset library for liferay.design",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start": "npm install && gulp build"
   },
   "repository": {
     "type": "git",
