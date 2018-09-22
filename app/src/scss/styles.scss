@@ -31,8 +31,11 @@ body {
 
 .copy {
   font-size: $fontSizeLarge;
-  line-height: 1.4;
   max-width: 30ch;
+}
+
+p {
+  line-height: 1.4;
 }
 
 footer {
@@ -54,7 +57,7 @@ a {
       "rb rb" 1fr
       "l l" 2rem / auto;
     grid-gap: $spacingSmall;
-    padding: $spacingSmall;
+    padding: $spacingBase;
     align-items: flex-end;
     min-height: 90vh;
   }
@@ -63,8 +66,14 @@ a {
     height: 100%;
     h1 {
       position: absolute;
-      left: 0;
+      right: 2rem;
+      top: 40vh;
       z-index: -1;
+    }
+  }
+  footer {
+    p {
+      font-size: $fontSizeBase;
     }
   }
 }
