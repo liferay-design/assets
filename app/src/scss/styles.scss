@@ -1,0 +1,70 @@
+@import "./variables";
+@import "./-reset.scss";
+
+.headline {
+  grid-area: l;
+  h1 {
+    color: $primary;
+    font-weight: $fontWeightBlack;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    text-align: right;
+    line-height: 0.9;
+    span {
+      margin-bottom: 1ch;
+    }
+  }
+}
+
+body {
+  font-family: $fontFamilyPrimary;
+  color: $white;
+  background: $black;
+  display: grid;
+  padding: $spacingBase;
+  grid-template:
+    "l r" 1fr
+    "l rb" 2rem / 1fr 2.4fr;
+  align-items: center;
+  grid-gap: $spacingBase;
+}
+
+.copy {
+  font-size: $fontSizeLarge;
+  line-height: 1.4;
+  max-width: 30ch;
+}
+
+footer {
+  grid-area: rb;
+  p {
+    color: $lightGrey;
+    font-size: $fontSizeXSmall;
+  }
+}
+
+a {
+  color: $white;
+}
+
+@media screen and (max-width: $screenMedium) {
+  body {
+    grid-template:
+      "r r" 1fr
+      "rb rb" 1fr
+      "l l" 2rem / auto;
+    grid-gap: $spacingSmall;
+    padding: $spacingSmall;
+    align-items: flex-end;
+    min-height: 90vh;
+  }
+  .headline {
+    width: 50%;
+    height: 100%;
+    h1 {
+      position: absolute;
+      left: 0;
+      z-index: -1;
+    }
+  }
+}
