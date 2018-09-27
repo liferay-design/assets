@@ -1,0 +1,642 @@
+<style type="text/css">.on-screen .terminal-animation .terminalScreen li, .on-screen .terminal-animation .terminalScreen li p {
+  animation-play-state: running;
+}
+
+.terminal-animation .terminalScreen li, .terminal-animation .terminalScreen li p {
+  animation-play-state: running;
+}
+p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.terminal-animation .window-wrapper {
+  background: #282C34;
+  border-radius: 4px;
+  font-family: 'Source Code Pro', Menlo,  monospace;
+  padding: .6em 1em .3em;
+  min-width: 52ch;
+}
+.terminal-animation .window-title {
+  height: 2ch;
+  width: 100%;
+  margin-bottom: .4em;
+}
+.terminal-animation .button {
+  border: solid 2px #4A5262;
+  border-radius: 50%;
+  display: inline-block;
+  height: .5em;
+  margin-top: 0;
+  width: .5em;
+}
+.terminal-animation .terminalScreen {
+  font-size: 11px;
+}
+.terminal-animation p {
+  margin-left: 46px;
+  overflow: hidden;
+  position: absolute;
+  width: 0;
+}
+.terminal-animation li {
+  overflow: hidden;
+  line-height: 18px;
+  width: 0;
+  margin-left: 38px;
+}
+.terminal-animation .aui ol {
+  margin: 10px 0 10px 0;
+}
+.terminal-animation span {
+  color: #fff;
+  font-weight: normal;
+}
+.terminal-animation ol {
+  color: #4B5364;
+  list-style-type: none;
+  margin-left: -5.5em;
+}
+.terminal-animation ol li::before {
+  margin-right: 1.5em;
+  padding-left: 0px;
+  text-align: right;
+}
+.terminal-animation ol > li {
+  counter-increment: customlistcounter;
+}
+.terminal-animation ol > li:before {
+  content: counter(customlistcounter) " ";
+  float: left;
+  font-weight: bold;
+  width: 3em;
+}
+.terminal-animation ol:first-child {
+  counter-reset: customlistcounter;
+}
+.terminal-animation .pink {
+  color: #ff79c6;
+}
+.terminal-animation .white {
+  color: #f8f8f2;
+}
+.terminal-animation .blue {
+  color: #66d9ef;
+  font-style: italic;
+}
+.terminal-animation .orange {
+  color: #ffb86c;
+  font-style: italic;
+}
+.terminal-animation .purple {
+  color: #bd93f9;
+}
+.terminal-animation .yellow {
+  color: #f1fa8c;
+}
+.terminal-animation .babyBlue {
+  color: #8be9fd;
+  font-style: italic;
+}
+.terminal-animation .green {
+  color: #50fa7b;
+}
+.terminal-animation .number1 {
+  -webkit-animation: type 0.5s 1s steps(50, end) forwards;
+  -moz-animation: type 0.5s 1s steps(50, end) forwards;
+  -o-animation: type 0.5s 1s steps(50, end) forwards;
+  animation: type 0.5s 1s steps(50, end) forwards;
+}
+.terminal-animation .line1 {
+  -webkit-animation: type 0.75s 1s steps(50, end) forwards;
+  -moz-animation: type 0.75s 1s steps(50, end) forwards;
+  -o-animation: type 0.75s 1s steps(50, end) forwards;
+  animation: type 0.75s 1s steps(50, end) forwards;
+}
+.terminal-animation .cursor1 {
+  -webkit-animation: blink 0.75s 1s 1 forwards;
+  -moz-animation: blink 0.75s 1s 1 forwards;
+  -o-animation: blink 0.75s 1s 1 forwards;
+  animation: blink 0.75s 1s 1 forwards;
+}
+.terminal-animation .number2 {
+  -webkit-animation: type 0.5s 1.35s steps(50, end) forwards;
+  -moz-animation: type 0.5s 1.35s steps(50, end) forwards;
+  -o-animation: type 0.5s 1.35s steps(50, end) forwards;
+  animation: type 0.5s 1.35s steps(50, end) forwards;
+}
+.terminal-animation .number3 {
+  -webkit-animation: type 0.5s 1.7s steps(50, end) forwards;
+  -moz-animation: type 0.5s 1.7s steps(50, end) forwards;
+  -o-animation: type 0.5s 1.7s steps(50, end) forwards;
+  animation: type 0.5s 1.7s steps(50, end) forwards;
+}
+.terminal-animation .line3 {
+  -webkit-animation: type 0.75s 1.75s steps(50, end) forwards;
+  -moz-animation: type 0.75s 1.75s steps(50, end) forwards;
+  -o-animation: type 0.75s 1.75s steps(50, end) forwards;
+  animation: type 0.75s 1.75s steps(50, end) forwards;
+}
+.terminal-animation .number4 {
+  -webkit-animation: type 0.5s 2.25s steps(50, end) forwards;
+  -moz-animation: type 0.5s 2.25s steps(50, end) forwards;
+  -o-animation: type 0.5s 2.25s steps(50, end) forwards;
+  animation: type 0.5s 2.25s steps(50, end) forwards;
+}
+.terminal-animation .line4 {
+  -webkit-animation: type 0.75s 2.5s steps(50, end) forwards;
+  -moz-animation: type 0.75s 2.5s steps(50, end) forwards;
+  -o-animation: type 0.75s 2.5s steps(50, end) forwards;
+  animation: type 0.75s 2.5s steps(50, end) forwards;
+}
+.terminal-animation .cursor4 {
+  -webkit-animation: blink 0.75s 2.5s 1 forwards;
+  -moz-animation: blink 0.75s 2.5s 1 forwards;
+  -o-animation: blink 0.75s 2.5s 1 forwards;
+  animation: blink 0.75s 2.5s 1 forwards;
+}
+.terminal-animation .number5 {
+  -webkit-animation: type 0.5s 2.9s steps(50, end) forwards;
+  -moz-animation: type 0.5s 2.9s steps(50, end) forwards;
+  -o-animation: type 0.5s 2.9s steps(50, end) forwards;
+  animation: type 0.5s 2.9s steps(50, end) forwards;
+}
+.terminal-animation .number6 {
+  -webkit-animation: type 0.5s 3.2s steps(50, end) forwards;
+  -moz-animation: type 0.5s 3.2s steps(50, end) forwards;
+  -o-animation: type 0.5s 3.2s steps(50, end) forwards;
+  animation: type 0.5s 3.2s steps(50, end) forwards;
+}
+.terminal-animation .line6 {
+  -webkit-animation: type 0.75s 3.25s steps(50, end) forwards;
+  -moz-animation: type 0.75s 3.25s steps(50, end) forwards;
+  -o-animation: type 0.75s 3.25s steps(50, end) forwards;
+  animation: type 0.75s 3.25s steps(50, end) forwards;
+}
+.terminal-animation .cursor6 {
+  -webkit-animation: blink 0.75s 3.25s 1 forwards;
+  -moz-animation: blink 0.75s 3.25s 1 forwards;
+  -o-animation: blink 0.75s 3.25s 1 forwards;
+  animation: blink 0.75s 3.25s 1 forwards;
+}
+.terminal-animation .number7 {
+  -webkit-animation: type 0.5s 3.55s steps(50, end) forwards;
+  -moz-animation: type 0.5s 3.55s steps(50, end) forwards;
+  -o-animation: type 0.5s 3.55s steps(50, end) forwards;
+  animation: type 0.5s 3.55s steps(50, end) forwards;
+}
+.terminal-animation .number8 {
+  -webkit-animation: type 0.5s 3.95s steps(50, end) forwards;
+  -moz-animation: type 0.5s 3.95s steps(50, end) forwards;
+  -o-animation: type 0.5s 3.95s steps(50, end) forwards;
+  animation: type 0.5s 3.95s steps(50, end) forwards;
+}
+.terminal-animation .line8 {
+  -webkit-animation: type 0.75s 4s steps(50, end) forwards;
+  -moz-animation: type 0.75s 4s steps(50, end) forwards;
+  -o-animation: type 0.75s 4s steps(50, end) forwards;
+  animation: type 0.75s 4s steps(50, end) forwards;
+}
+.terminal-animation .number9 {
+  -webkit-animation: type 0.5s 4.7s steps(50, end) forwards;
+  -moz-animation: type 0.5s 4.7s steps(50, end) forwards;
+  -o-animation: type 0.5s 4.7s steps(50, end) forwards;
+  animation: type 0.5s 4.7s steps(50, end) forwards;
+}
+.terminal-animation .line9 {
+  -webkit-animation: type 0.75s 4.75s steps(50, end) forwards;
+  -moz-animation: type 0.75s 4.75s steps(50, end) forwards;
+  -o-animation: type 0.75s 4.75s steps(50, end) forwards;
+  animation: type 0.75s 4.75s steps(50, end) forwards;
+}
+.terminal-animation .number10 {
+  -webkit-animation: type 0.5s 5.45s steps(50, end) forwards;
+  -moz-animation: type 0.5s 5.45s steps(50, end) forwards;
+  -o-animation: type 0.5s 5.45s steps(50, end) forwards;
+  animation: type 0.5s 5.45s steps(50, end) forwards;
+}
+.terminal-animation .line10 {
+  -webkit-animation: type 0.75s 5.5s steps(50, end) forwards;
+  -moz-animation: type 0.75s 5.5s steps(50, end) forwards;
+  -o-animation: type 0.75s 5.5s steps(50, end) forwards;
+  animation: type 0.75s 5.5s steps(50, end) forwards;
+}
+.terminal-animation .cursor10 {
+  -webkit-animation: blink 0.75s 5.5s 1 forwards;
+  -moz-animation: blink 0.75s 5.5s 1 forwards;
+  -o-animation: blink 0.75s 5.5s 1 forwards;
+  animation: blink 0.75s 5.5s 1 forwards;
+}
+.terminal-animation .number11 {
+  -webkit-animation: type 0.5s 5.8s steps(50, end) forwards;
+  -moz-animation: type 0.5s 5.8s steps(50, end) forwards;
+  -o-animation: type 0.5s 5.8s steps(50, end) forwards;
+  animation: type 0.5s 5.8s steps(50, end) forwards;
+}
+.terminal-animation .number12 {
+  -webkit-animation: type 0.5s 6.2s steps(50, end) forwards;
+  -moz-animation: type 0.5s 6.2s steps(50, end) forwards;
+  -o-animation: type 0.5s 6.2s steps(50, end) forwards;
+  animation: type 0.5s 6.2s steps(50, end) forwards;
+}
+.terminal-animation .line12 {
+  -webkit-animation: type 0.75s 6.25s steps(50, end) forwards;
+  -moz-animation: type 0.75s 6.25s steps(50, end) forwards;
+  -o-animation: type 0.75s 6.25s steps(50, end) forwards;
+  animation: type 0.75s 6.25s steps(50, end) forwards;
+}
+.terminal-animation .number13 {
+  -webkit-animation: type 0.5s 6.95s steps(50, end) forwards;
+  -moz-animation: type 0.5s 6.95s steps(50, end) forwards;
+  -o-animation: type 0.5s 6.95s steps(50, end) forwards;
+  animation: type 0.5s 6.95s steps(50, end) forwards;
+}
+.terminal-animation .line13 {
+  padding-left: 1em;
+  -webkit-animation: type 0.75s 7s steps(50, end) forwards;
+  -moz-animation: type 0.75s 7s steps(50, end) forwards;
+  -o-animation: type 0.75s 7s steps(50, end) forwards;
+  animation: type 0.75s 7s steps(50, end) forwards;
+}
+.terminal-animation .number14 {
+  -webkit-animation: type 0.5s 7.7s steps(50, end) forwards;
+  -moz-animation: type 0.5s 7.7s steps(50, end) forwards;
+  -o-animation: type 0.5s 7.7s steps(50, end) forwards;
+  animation: type 0.5s 7.7s steps(50, end) forwards;
+}
+.terminal-animation .line14 {
+  padding-left: 1em;
+  -webkit-animation: type 0.75s 7.75s steps(50, end) forwards;
+  -moz-animation: type 0.75s 7.75s steps(50, end) forwards;
+  -o-animation: type 0.75s 7.75s steps(50, end) forwards;
+  animation: type 0.75s 7.75s steps(50, end) forwards;
+}
+.terminal-animation .number15 {
+  -webkit-animation: type 0.5s 8.45s steps(50, end) forwards;
+  -moz-animation: type 0.5s 8.45s steps(50, end) forwards;
+  -o-animation: type 0.5s 8.45s steps(50, end) forwards;
+  animation: type 0.5s 8.45s steps(50, end) forwards;
+}
+.terminal-animation .line15 {
+  padding-left: 2em;
+  -webkit-animation: type 0.75s 8.5s steps(50, end) forwards;
+  -moz-animation: type 0.75s 8.5s steps(50, end) forwards;
+  -o-animation: type 0.75s 8.5s steps(50, end) forwards;
+  animation: type 0.75s 8.5s steps(50, end) forwards;
+}
+.terminal-animation .number16 {
+  -webkit-animation: type 0.5s 9.2s steps(50, end) forwards;
+  -moz-animation: type 0.5s 9.2s steps(50, end) forwards;
+  -o-animation: type 0.5s 9.2s steps(50, end) forwards;
+  animation: type 0.5s 9.2s steps(50, end) forwards;
+}
+.terminal-animation .line16 {
+  padding-left: 2em;
+  -webkit-animation: type 0.75s 9.25s steps(50, end) forwards;
+  -moz-animation: type 0.75s 9.25s steps(50, end) forwards;
+  -o-animation: type 0.75s 9.25s steps(50, end) forwards;
+  animation: type 0.75s 9.25s steps(50, end) forwards;
+}
+.terminal-animation .number17 {
+  -webkit-animation: type 0.5s 9.95s steps(50, end) forwards;
+  -moz-animation: type 0.5s 9.95s steps(50, end) forwards;
+  -o-animation: type 0.5s 9.95s steps(50, end) forwards;
+  animation: type 0.5s 9.95s steps(50, end) forwards;
+}
+.terminal-animation .line17 {
+  padding-left: 1em;
+  -webkit-animation: type 0.75s 10s steps(50, end) forwards;
+  -moz-animation: type 0.75s 10s steps(50, end) forwards;
+  -o-animation: type 0.75s 10s steps(50, end) forwards;
+  animation: type 0.75s 10s steps(50, end) forwards;
+}
+.terminal-animation .cursor17 {
+  -webkit-animation: blink 0.75s 10s 1 forwards;
+  -moz-animation: blink 0.75s 10s 1 forwards;
+  -o-animation: blink 0.75s 10s 1 forwards;
+  animation: blink 0.75s 10s 1 forwards;
+}
+.terminal-animation .number18 {
+  -webkit-animation: type 0.5s 10.7s steps(50, end) forwards;
+  -moz-animation: type 0.5s 10.7s steps(50, end) forwards;
+  -o-animation: type 0.5s 10.7s steps(50, end) forwards;
+  animation: type 0.5s 10.7s steps(50, end) forwards;
+}
+.terminal-animation .line18 {
+  -webkit-animation: type 0.75s 10.75s steps(50, end) forwards;
+  -moz-animation: type 0.75s 10.75s steps(50, end) forwards;
+  -o-animation: type 0.75s 10.75s steps(50, end) forwards;
+  animation: type 0.75s 10.75s steps(50, end) forwards;
+}
+.terminal-animation .number19 {
+  -webkit-animation: type 0.5s 11.45s steps(50, end) forwards;
+  -moz-animation: type 0.5s 11.45s steps(50, end) forwards;
+  -o-animation: type 0.5s 11.45s steps(50, end) forwards;
+  animation: type 0.5s 11.45s steps(50, end) forwards;
+}
+.terminal-animation .line19 {
+  -webkit-animation: type 0.75s 11.5s steps(50, end) forwards;
+  -moz-animation: type 0.75s 11.5s steps(50, end) forwards;
+  -o-animation: type 0.75s 11.5s steps(50, end) forwards;
+  animation: type 0.75s 11.5s steps(50, end) forwards;
+}
+.terminal-animation .number20 {
+  -webkit-animation: type 0.5s 12.2s steps(50, end) forwards;
+  -moz-animation: type 0.5s 12.2s steps(50, end) forwards;
+  -o-animation: type 0.5s 12.2s steps(50, end) forwards;
+  animation: type 0.5s 12.2s steps(50, end) forwards;
+}
+.terminal-animation .line20 {
+  padding-left: 1em;
+  -webkit-animation: type 0.75s 12.25s steps(50, end) forwards;
+  -moz-animation: type 0.75s 12.25s steps(50, end) forwards;
+  -o-animation: type 0.75s 12.25s steps(50, end) forwards;
+  animation: type 0.75s 12.25s steps(50, end) forwards;
+}
+.terminal-animation .cursor20 {
+  -webkit-animation: blink 0.75s 12.25s 1 forwards;
+  -moz-animation: blink 0.75s 12.25s 1 forwards;
+  -o-animation: blink 0.75s 12.25s 1 forwards;
+  animation: blink 0.75s 12.25s 1 forwards;
+}
+.terminal-animation .number21 {
+  -webkit-animation: type 0.5s 12.95s steps(50, end) forwards;
+  -moz-animation: type 0.5s 12.95s steps(50, end) forwards;
+  -o-animation: type 0.5s 12.95s steps(50, end) forwards;
+  animation: type 0.5s 12.95s steps(50, end) forwards;
+}
+.terminal-animation .line21 {
+  padding-left: 1em;
+  -webkit-animation: type 0.75s 13s steps(50, end) forwards;
+  -moz-animation: type 0.75s 13s steps(50, end) forwards;
+  -o-animation: type 0.75s 13s steps(50, end) forwards;
+  animation: type 0.75s 13s steps(50, end) forwards;
+}
+.terminal-animation .number22 {
+  -webkit-animation: type 0.5s 13.7s steps(50, end) forwards;
+  -moz-animation: type 0.5s 13.7s steps(50, end) forwards;
+  -o-animation: type 0.5s 13.7s steps(50, end) forwards;
+  animation: type 0.5s 13.7s steps(50, end) forwards;
+}
+.terminal-animation .line22 {
+  padding-left: 1em;
+  -webkit-animation: type 0.75s 13.75s steps(50, end) forwards;
+  -moz-animation: type 0.75s 13.75s steps(50, end) forwards;
+  -o-animation: type 0.75s 13.75s steps(50, end) forwards;
+  animation: type 0.75s 13.75s steps(50, end) forwards;
+}
+.terminal-animation .number23 {
+  -webkit-animation: type 0.5s 14.45s steps(50, end) forwards;
+  -moz-animation: type 0.5s 14.45s steps(50, end) forwards;
+  -o-animation: type 0.5s 14.45s steps(50, end) forwards;
+  animation: type 0.5s 14.45s steps(50, end) forwards;
+}
+.terminal-animation .line23 {
+  padding-left: 3em;
+  -webkit-animation: type 0.75s 14.5s steps(50, end) forwards;
+  -moz-animation: type 0.75s 14.5s steps(50, end) forwards;
+  -o-animation: type 0.75s 14.5s steps(50, end) forwards;
+  animation: type 0.75s 14.5s steps(50, end) forwards;
+}
+.terminal-animation .number24 {
+  -webkit-animation: type 0.5s 15.2s steps(50, end) forwards;
+  -moz-animation: type 0.5s 15.2s steps(50, end) forwards;
+  -o-animation: type 0.5s 15.2s steps(50, end) forwards;
+  animation: type 0.5s 15.2s steps(50, end) forwards;
+}
+.terminal-animation .line24 {
+  padding-left: 2em;
+  -webkit-animation: type 0.75s 15.25s steps(50, end) forwards;
+  -moz-animation: type 0.75s 15.25s steps(50, end) forwards;
+  -o-animation: type 0.75s 15.25s steps(50, end) forwards;
+  animation: type 0.75s 15.25s steps(50, end) forwards;
+}
+.terminal-animation .number25 {
+  -webkit-animation: type 0.5s 15.55s steps(50, end) forwards;
+  -moz-animation: type 0.5s 15.55s steps(50, end) forwards;
+  -o-animation: type 0.5s 15.55s steps(50, end) forwards;
+  animation: type 0.5s 15.55s steps(50, end) forwards;
+}
+.terminal-animation .number26 {
+  -webkit-animation: type 0.5s 15.95s steps(50, end) forwards;
+  -moz-animation: type 0.5s 15.95s steps(50, end) forwards;
+  -o-animation: type 0.5s 15.95s steps(50, end) forwards;
+  animation: type 0.5s 15.95s steps(50, end) forwards;
+}
+.terminal-animation .line26 {
+  padding-left: 2em;
+  -webkit-animation: type 0.75s 16s steps(50, end) forwards;
+  -moz-animation: type 0.75s 16s steps(50, end) forwards;
+  -o-animation: type 0.75s 16s steps(50, end) forwards;
+  animation: type 0.75s 16s steps(50, end) forwards;
+}
+.terminal-animation .number27 {
+  -webkit-animation: type 0.5s 16.7s steps(50, end) forwards;
+  -moz-animation: type 0.5s 16.7s steps(50, end) forwards;
+  -o-animation: type 0.5s 16.7s steps(50, end) forwards;
+  animation: type 0.5s 16.7s steps(50, end) forwards;
+}
+.terminal-animation .line27 {
+  padding-left: 1em;
+  -webkit-animation: type 0.75s 16.75s steps(50, end) forwards;
+  -moz-animation: type 0.75s 16.75s steps(50, end) forwards;
+  -o-animation: type 0.75s 16.75s steps(50, end) forwards;
+  animation: type 0.75s 16.75s steps(50, end) forwards;
+}
+.terminal-animation .number28 {
+  -webkit-animation: type 0.5s 17.45s steps(50, end) forwards;
+  -moz-animation: type 0.5s 17.45s steps(50, end) forwards;
+  -o-animation: type 0.5s 17.45s steps(50, end) forwards;
+  animation: type 0.5s 17.45s steps(50, end) forwards;
+}
+.terminal-animation .line28 {
+  -webkit-animation: type 0.75s 17.5s steps(50, end) forwards;
+  -moz-animation: type 0.75s 17.5s steps(50, end) forwards;
+  -o-animation: type 0.75s 17.5s steps(50, end) forwards;
+  animation: type 0.75s 17.5s steps(50, end) forwards;
+}
+.terminal-animation .cursor28 {
+  -webkit-animation: blink 1s 17.5s 2 forwards;
+  -moz-animation: blink 1s 17.5s 2 forwards;
+  -o-animation: blink 1s 17.5s 2 forwards;
+  animation: blink 1s 17.5s infinite forwards;
+}
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-o-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@-webkit-keyframes type {
+  to {
+    width: 17em;
+  }
+}
+@-moz-keyframes type {
+  to {
+    width: 17em;
+  }
+}
+@-o-keyframes type {
+  to {
+    width: 17em;
+  }
+}
+@keyframes type {
+  to {
+    width: 50em;
+  }
+}
+</style>
+<div class="terminal-animation standard-padding">
+<div class="window-wrapper">
+<div class="window-title">
+<div class="button">&nbsp;</div>
+
+<div class="button">&nbsp;</div>
+
+<div class="button">&nbsp;</div>
+</div>
+
+<div class="terminalScreen">
+<ol>
+	<li class="number1">
+	<p class="line1"><span class="pink">package</span>&nbsp;<span class="white">com</span><span class="pink">.</span><span class="white">liferay</span><span class="pink">.</span><span class="white">sample</span><span class="pink">.</span><span class="white">portlet</span><span class="pink">.</span><span class="white">action;</span><span class="cursor1">_</span></p>
+	</li>
+	<li class="number2">&nbsp;</li>
+	<li class="number3">
+	<p class="line3"><span class="pink">import</span>&nbsp;<span class="blue">com</span><span class="pink">.</span><span class="blue">liferay</span><span class="pink">.</span><span class="blue">portal</span><span class="pink">.</span><span class="blue">kernel</span><span class="pink">.</span><span class="blue">portlet</span><span class="pink">.</span><span class="blue">bridges</span><span class="pink">.</span><span class="blue">mvc</span><span class="pink">.</span><span class="blue">MVCRenderCommand</span><span class="white">;</span></p>
+	</li>
+	<li class="number4">
+	<p class="line4"><span class="pink">import</span>&nbsp;<span class="blue">com</span><span class="pink">.</span><span class="blue">liferay</span><span class="pink">.</span><span class="blue">sample</span><span class="pink">.</span><span class="blue">constants</span><span class="pink">.</span><span class="blue">Portletkeys</span><span class="white">;</span><span class="cursor4">_</span></p>
+	</li>
+	<li class="number5">&nbsp;</li>
+	<li class="number6">
+	<p class="line6"><span class="pink">import</span>&nbsp;<span class="blue">org</span><span class="pink">.</span><span class="blue">osgi</span><span class="pink">.</span><span class="blue">service</span><span class="pink">.</span><span class="blue">component</span><span class="pink">.</span><span class="blue">annotations</span><span class="pink">.</span><span class="blue">Component</span><span class="white">;</span><span class="cursor6">_</span></p>
+	</li>
+	<li class="number7">&nbsp;</li>
+	<li class="number8">
+	<p class="line8"><span class="pink">import</span>&nbsp;<span class="blue">javax</span><span class="pink">.</span><span class="blue">portlet</span><span class="pink">.</span><span class="blue">PortletException</span><span class="white">;</span></p>
+	</li>
+	<li class="number9">
+	<p class="line9"><span class="pink">import</span>&nbsp;<span class="blue">javax</span><span class="pink">.</span><span class="blue">portlet</span><span class="pink">.</span><span class="blue">RenderRequest</span><span class="white">;</span></p>
+	</li>
+	<li class="number10">
+	<p class="line10"><span class="pink">import</span>&nbsp;<span class="blue">javax</span><span class="pink">.</span><span class="blue">portlet</span><span class="pink">.</span><span class="blue">RenderResponse</span><span class="white">;</span><span class="cursor10">_</span></p>
+	</li>
+	<li class="number11">&nbsp;</li>
+	<li class="number12">
+	<p class="line12"><span class="white">@Component(</span></p>
+	</li>
+	<li class="number13">
+	<p class="line13"><span class="orange">immediate</span>&nbsp;<span class="pink">=</span>&nbsp;<span class="purple">true</span><span class="white">,</span></p>
+	</li>
+	<li class="number14">
+	<p class="line14"><span class="orange">property</span>&nbsp;<span class="pink">=</span>&nbsp;<span class="white">{</span></p>
+	</li>
+	<li class="number15">
+	<p class="line15"><span class="yellow">"javax<span class="pink">.</span>portlet<span class="pink">.</span>name="</span>&nbsp;<span class="pink">+</span>&nbsp;<span class="blue">PortletKeys</span><span class="pink">.</span><span class="purple">SAMPLE_PORTLET</span><span class="white">,</span></p>
+	</li>
+	<li class="number16">
+	<p class="line16"><span class="yellow">"mvc<span class="pink">.</span>command<span class="pink">.</span>name=/"</span><span class="white">,</span>&nbsp;<span class="yellow">"mvc<span class="pink">.</span>command<span class="pink">.</span>name=/view"</span></p>
+	</li>
+	<li class="number17">
+	<p class="line17"><span class="white">},</span><span class="cursor17">_</span></p>
+	</li>
+	<li class="number18">
+	<p class="line18"><span class="orange">service</span>&nbsp;<span class="pink">=</span>&nbsp;<span class="blue">MVCRenderCommand</span><span class="pink">.</span><span class="purple">class</span></p>
+	</li>
+	<li class="number19">
+	<p class="line19"><span class="white">)</span></p>
+	</li>
+	<li class="number20">
+	<p class="line20"><span class="pink">public</span>&nbsp;<span class="babyBlue">class&nbsp;ViewRenderCommand</span>&nbsp;<span class="pink">implements</span>&nbsp;<span class="babyBlue">MVCRenderCommand</span>&nbsp;<span class="white">{</span><span class="cursor20">_</span></p>
+	</li>
+	<li class="number21">
+	<p class="line21"><span class="white">@Override</span></p>
+	</li>
+	<li class="number22">
+	<p class="line22"><span class="pink">public</span>&nbsp;<span class="blue">String</span>&nbsp;<span class="green">render</span><span class="white">(</span></p>
+	</li>
+	<li class="number23">
+	<p class="line23"><span class="blue">RenderRequest</span>&nbsp;<span class="orange">renderRequest</span><span class="white">,</span>&nbsp;<span class="blue">RenderResponse</span>&nbsp;<span class="orange">renderResponse</span><span class="white">)</span></p>
+	</li>
+	<li class="number24">
+	<p class="line24"><span class="pink">throws</span>&nbsp;<span class="blue">PortletException</span>&nbsp;<span class="white">{</span></p>
+	</li>
+	<li class="number25">&nbsp;</li>
+	<li class="number26">
+	<p class="line26"><span class="pink">return</span>&nbsp;<span class="yellow">"/view.jsp"</span><span class="white">;</span></p>
+	</li>
+	<li class="number27">
+	<p class="line27"><span class="white">}</span></p>
+	</li>
+	<li class="number28">
+	<p class="line28"><span class="white">}</span><span class="cursor28">_</span></p>
+	</li>
+</ol>
+</div>
+</div>
+</div>
